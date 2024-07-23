@@ -1,11 +1,11 @@
-import { Test } from '@/app/components/Test';
+import styles from '@/app/page.module.css';
 
 const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>トップページです</h1>
-      <Test />
-    </main>
+    <div>
+      <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+      <p className={styles.description}>私たちは市場をリードしているグローバルテックカンパニーです。</p>
+    </div>
   );
 };
 
