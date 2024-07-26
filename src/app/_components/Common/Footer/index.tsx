@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import styles from '@/app/_components/Common/Footer/index.module.css';
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className={styles.footer}>
       <nav className={styles.nav}>
@@ -21,4 +21,6 @@ export default function Footer() {
       <p className={styles.cr}>© SIMPLE. All Rights Reserved 2024</p>
     </footer>
   );
-}
+};
+
+export default Footer;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '@/app/_components/Common/Header/index.module.css';
 // import Menu from '../Menu';
 
-export default function Header() {
+const Header = () => {
   return (
     <header className={styles.header}>
       <Link className={styles.logoLink} href="/">
@@ -13,4 +13,6 @@ export default function Header() {
       {/* <Menu /> */}
     </header>
   );
-}
+};
+
+export default Header;
