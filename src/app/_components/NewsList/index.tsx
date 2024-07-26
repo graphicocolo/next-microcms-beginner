@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Category from '@/app/_components/Category';
 import Date from '@/app/_components/Date';
@@ -18,7 +19,7 @@ const NewsList = ({ news }: Props) => {
       {news.map((article) => (
         <li className={styles.list} key={article.id}>
           {/* TODO:別の章で、リンクと正式な画像に差し替えます */}
-          <div className={styles.link}>
+          <Link className={styles.link} href={`/news/${article.id}`}>
             <Image alt="No Image" className={styles.image} height={630} src="/no-image.png" width={1200} />
             <dl className={styles.content}>
               <dt className={styles.newsItemTitle}>{article.title}</dt>
@@ -27,7 +28,7 @@ const NewsList = ({ news }: Props) => {
                 <Date date={article.publishedAt} />
               </dd>
             </dl>
-          </div>
+          </Link>
         </li>
       ))}
     </ul>
