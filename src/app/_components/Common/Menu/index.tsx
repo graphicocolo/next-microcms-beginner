@@ -13,8 +13,7 @@ const Menu = () => {
 
   const handleClickIsClose = () => setOpen(false);
 
-  // メニュー内のリンクをクリックしたら setOpen が false になるようにしなくてはならない
-  // 下記でも一応は動作するが、メニューが閉じた直後は遷移前のページが一瞬表示される
+  // メニューを開いたままウィンドウサイズを広げた場合もメニューが表示されたまま
   return (
     <div>
       <nav className={isOpen ? `${styles.nav} ${styles.open}` : `${styles.nav}`}>
