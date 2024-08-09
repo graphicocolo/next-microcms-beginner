@@ -9,11 +9,14 @@ type Props = {
   params: {
     slug: string;
   };
+  searchParams: {
+    dk?: string;
+  };
 };
 
-const Page = async ({ params }: Props) => {
+const Page = async ({ params, searchParams }: Props) => {
   // 動的ルーティングで404ページを指定するにはnotFound関数を利用
-  const data = await getNewsDetail(params.slug).catch(notFound);
+  const data = await getNewsDetail(params.slug, { draftKey: searchParams.dk }).catch(notFound);
   return (
     <>
       <Article data={data} />
