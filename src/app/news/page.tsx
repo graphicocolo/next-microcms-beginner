@@ -1,9 +1,8 @@
 import NewsList from '@/app/_components/NewsList';
 import Pagination from '@/app/_components/Pagination';
+import SearchField from '@/app/_components/SearchField';
 import { NEWS_LIST_LIMIT } from '@/app/_constants';
 import { getNewsList } from '@/app/_libs/microcms';
-
-// import SearchField from '@/app/_components/SearchField';
 
 const Page = async () => {
   // getNewsList で取得された contents プロパティの内容を
@@ -14,7 +13,7 @@ const Page = async () => {
 
   return (
     <>
-      {/* <SearchField /> */}
+      <SearchField />
       <NewsList news={news} />
       <Pagination totalCount={totalCount} />
     </>
