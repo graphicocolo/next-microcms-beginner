@@ -9,7 +9,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-// export const revalidate = 60;
+export const revalidate = 60;
 
 const NewsLayout = ({ children }: Props) => {
   return (
