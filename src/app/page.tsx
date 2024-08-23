@@ -18,7 +18,18 @@ const Home = async () => {
           <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
           <p className={styles.description}>私たちは市場をリードしているグローバルテックカンパニーです。</p>
         </div>
-        <Image alt="" className={styles.bgimg} height={1200} src="/img-mv.jpg" width={4000} />
+        {/* <Image alt="" className={styles.bgimg} height={1200} priority sizes="100vw" src="/img-mv.jpg" width={4000} /> */}
+        <Image
+          alt=""
+          className={styles.bgimg}
+          height={1200}
+          priority
+          // メディアクエリ
+          // 641px 以降は画面幅の半分のサイズの画像を使用
+          sizes="(max-width: 640px) 100vw, 50vw"
+          src="/img-mv.jpg"
+          width={4000}
+        />
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
