@@ -14,7 +14,15 @@ const Hero = ({ title, sub }: Props) => {
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.sub}>{sub}</p>
       </div>
-      <Image alt="" className={styles.bgimg} height={1200} src="/img-mv.jpg" width={4000} />
+      <Image
+        alt=""
+        className={styles.bgimg}
+        height={1200}
+        priority
+        sizes="(max-width: 640px) 100vw, 50vw"
+        src="/img-mv.jpg"
+        width={4000}
+      />
     </section>
   );
 };
